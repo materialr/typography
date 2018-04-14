@@ -21,9 +21,7 @@ test('Subheading2 > Loads all classNames based on props', () => {
     <Subheading2 adjustMargin className={CLASS_NAME}>Subheading2</Subheading2>,
     { disableLifecycleMethods: true },
   );
-  // eslint-disable-next-line prefer-template
-  const expected = 'mdc-typography mdc-typography--adjust-margin mdc-typography--subheading2 ' +
-    CLASS_NAME;
+  const expected = `mdc-typography mdc-typography--subheading2 ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 

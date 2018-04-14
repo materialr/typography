@@ -15,12 +15,10 @@ test('Button > Loads the default classNames', () => {
 test('Button > Loads all classNames based on props', () => {
   const CLASS_NAME = 'CLASS_NAME';
   const wrapper = shallow(
-    <Button adjustMargin className={CLASS_NAME}>Button</Button>,
+    <Button className={CLASS_NAME}>Button</Button>,
     { disableLifecycleMethods: true },
   );
-  // eslint-disable-next-line prefer-template
-  const expected = 'mdc-typography mdc-typography--adjust-margin mdc-typography--button ' +
-    CLASS_NAME;
+  const expected = `mdc-typography mdc-typography--button ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 

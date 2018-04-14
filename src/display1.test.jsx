@@ -18,9 +18,7 @@ test('Display1 > Loads all classNames based on props', () => {
     <Display1 adjustMargin className={CLASS_NAME}>Display1</Display1>,
     { disableLifecycleMethods: true },
   );
-  // eslint-disable-next-line prefer-template
-  const expected = 'mdc-typography mdc-typography--adjust-margin mdc-typography--display1 ' +
-    CLASS_NAME;
+  const expected = `mdc-typography mdc-typography--display1 ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 

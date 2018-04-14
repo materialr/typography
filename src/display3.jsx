@@ -2,25 +2,22 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const getClassNames = (adjustMargin, className) => classnames({
+const getClassNames = className => classnames({
   'mdc-typography': true,
-  'mdc-typography--adjust-margin': adjustMargin,
   'mdc-typography--display3': true,
   [className]: !!className,
 });
 
-const Display3 = ({ adjustMargin, children, className }) => (
-  <h1 className={getClassNames(adjustMargin, className)}>{children}</h1>
+const Display3 = ({ children, className }) => (
+  <h1 className={getClassNames(className)}>{children}</h1>
 );
 
 Display3.propTypes = {
-  adjustMargin: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   className: PropTypes.string,
 };
 
 Display3.defaultProps = {
-  adjustMargin: false,
   className: undefined,
 };
 
