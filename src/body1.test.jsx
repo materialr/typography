@@ -15,12 +15,10 @@ test('Body1 > Loads the default classNames', () => {
 test('Body1 > Loads all classNames based on props', () => {
   const CLASS_NAME = 'CLASS_NAME';
   const wrapper = shallow(
-    <Body1 adjustMargin className={CLASS_NAME}>Body1</Body1>,
+    <Body1 className={CLASS_NAME}>Body1</Body1>,
     { disableLifecycleMethods: true },
   );
-  // eslint-disable-next-line prefer-template
-  const expected = 'mdc-typography mdc-typography--adjust-margin mdc-typography--body1 ' +
-    CLASS_NAME;
+  const expected = `mdc-typography mdc-typography--body1 ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 

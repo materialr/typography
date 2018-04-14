@@ -18,9 +18,7 @@ test('Caption > Loads all classNames based on props', () => {
     <Caption adjustMargin className={CLASS_NAME}>Caption</Caption>,
     { disableLifecycleMethods: true },
   );
-  // eslint-disable-next-line prefer-template
-  const expected = 'mdc-typography mdc-typography--adjust-margin mdc-typography--caption ' +
-    CLASS_NAME;
+  const expected = `mdc-typography mdc-typography--caption ${CLASS_NAME}`;
 
   const actual = wrapper.props().className;
 
