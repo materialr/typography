@@ -4,21 +4,21 @@ import React from 'react';
 
 const getClassNames = className => classnames({
   'mdc-typography': true,
-  'mdc-typography--display4': true,
+  'mdc-typography--headline4': true,
   [className]: !!className,
 });
 
-const Display4 = ({ children, className }) => (
-  <h1 className={getClassNames(className)}>{children}</h1>
+const Headline4 = ({ children, className }) => (
+  <h4 className={getClassNames(className)}>{children}</h4>
 );
 
-Display4.propTypes = {
+Headline4.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   className: PropTypes.string,
 };
 
-Display4.defaultProps = {
+Headline4.defaultProps = {
   className: undefined,
 };
 
-export default Display4;
+export default Headline4;

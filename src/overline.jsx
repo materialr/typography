@@ -4,21 +4,21 @@ import React from 'react';
 
 const getClassNames = className => classnames({
   'mdc-typography': true,
-  'mdc-typography--button': true,
+  'mdc-typography--overline': true,
   [className]: !!className,
 });
 
-const Button = ({ children, className }) => (
+const Overline = ({ children, className }) => (
   <span className={getClassNames(className)}>{children}</span>
 );
 
-Button.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+Overline.propTypes = {
+  children: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
-Button.defaultProps = {
+Overline.defaultProps = {
   className: undefined,
 };
 
-export default Button;
+export default Overline;

@@ -4,21 +4,21 @@ import React from 'react';
 
 const getClassNames = className => classnames({
   'mdc-typography': true,
-  'mdc-typography--button': true,
+  'mdc-typography--headline6': true,
   [className]: !!className,
 });
 
-const Button = ({ children, className }) => (
-  <span className={getClassNames(className)}>{children}</span>
+const Headline6 = ({ children, className }) => (
+  <h6 className={getClassNames(className)}>{children}</h6>
 );
 
-Button.propTypes = {
+Headline6.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   className: PropTypes.string,
 };
 
-Button.defaultProps = {
+Headline6.defaultProps = {
   className: undefined,
 };
 
-export default Button;
+export default Headline6;
