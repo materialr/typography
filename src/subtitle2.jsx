@@ -4,21 +4,21 @@ import React from 'react';
 
 const getClassNames = className => classnames({
   'mdc-typography': true,
-  'mdc-typography--display3': true,
+  'mdc-typography--subtitle2': true,
   [className]: !!className,
 });
 
-const Display3 = ({ children, className }) => (
-  <h1 className={getClassNames(className)}>{children}</h1>
+const Subtitle2 = ({ children, className }) => (
+  <h6 className={getClassNames(className)}>{children}</h6>
 );
 
-Display3.propTypes = {
+Subtitle2.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   className: PropTypes.string,
 };
 
-Display3.defaultProps = {
+Subtitle2.defaultProps = {
   className: undefined,
 };
 
-export default Display3;
+export default Subtitle2;
