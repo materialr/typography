@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Headline2 = ({ children, className }) => (
-  <h2 className={getClassNames(className)}>{children}</h2>
+const Headline2 = ({ children, className, ...props }) => (
+  <h2 className={getClassNames(className)} {...props}>{children}</h2>
 );
 
 Headline2.propTypes = {

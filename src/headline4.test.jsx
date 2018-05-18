@@ -35,3 +35,16 @@ test('Renders the children elements', () => {
 
   expect(actual).toBe(expected);
 });
+
+test('Adds extra properties that are passed in', () => {
+  const DATA_QA = 'DATA_QA';
+  const wrapper = shallow(
+    <Headline4 data-qa={DATA_QA}>{CHILDREN}</Headline4>,
+    { disableLifecycleMethods: true },
+  );
+  const expected = DATA_QA;
+
+  const actual = wrapper.props()['data-qa'];
+
+  expect(actual).toBe(expected);
+});

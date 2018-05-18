@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Body2 = ({ children, className }) => (
-  <aside className={getClassNames(className)}>{children}</aside>
+const Body2 = ({ children, className, ...props }) => (
+  <aside className={getClassNames(className)} {...props}>{children}</aside>
 );
 
 Body2.propTypes = {

@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Body1 = ({ children, className }) => (
-  <p className={getClassNames(className)}>{children}</p>
+const Body1 = ({ children, className, ...props }) => (
+  <p className={getClassNames(className)} {...props}>{children}</p>
 );
 
 Body1.propTypes = {
