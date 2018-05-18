@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Caption = ({ children, className }) => (
-  <span className={getClassNames(className)}>{children}</span>
+const Caption = ({ children, className, ...props }) => (
+  <span className={getClassNames(className)} {...props}>{children}</span>
 );
 
 Caption.propTypes = {

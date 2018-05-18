@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Button = ({ children, className }) => (
-  <span className={getClassNames(className)}>{children}</span>
+const Button = ({ children, className, ...props }) => (
+  <span className={getClassNames(className)} {...props}>{children}</span>
 );
 
 Button.propTypes = {

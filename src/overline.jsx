@@ -8,8 +8,8 @@ const getClassNames = className => classnames({
   [className]: !!className,
 });
 
-const Overline = ({ children, className }) => (
-  <span className={getClassNames(className)}>{children}</span>
+const Overline = ({ children, className, ...props }) => (
+  <span className={getClassNames(className)} {...props}>{children}</span>
 );
 
 Overline.propTypes = {
