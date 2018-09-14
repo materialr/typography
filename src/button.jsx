@@ -13,7 +13,7 @@ const Button = ({ children, className, ...props }) => (
 );
 
 Button.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 

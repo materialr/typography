@@ -13,7 +13,7 @@ const Body1 = ({ children, className, ...props }) => (
 );
 
 Body1.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 
