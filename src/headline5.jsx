@@ -13,7 +13,7 @@ const Headline5 = ({ children, className, ...props }) => (
 );
 
 Headline5.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 

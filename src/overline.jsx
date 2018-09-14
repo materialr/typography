@@ -13,7 +13,7 @@ const Overline = ({ children, className, ...props }) => (
 );
 
 Overline.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 

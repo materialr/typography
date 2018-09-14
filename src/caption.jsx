@@ -13,7 +13,7 @@ const Caption = ({ children, className, ...props }) => (
 );
 
 Caption.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 
